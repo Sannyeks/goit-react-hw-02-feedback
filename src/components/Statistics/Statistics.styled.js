@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 export const StatisticsList = styled.ul`
   margin-top: 20px;
-  margin-left: 55px;
+  margin-left: 30px;
   display: flex;
+  position: center;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
 `;
 

@@ -8,13 +8,14 @@ export const OptionsList = styled.ul`
 `;
 
 export const Button = styled.button`
-  width: 100px;
-  height: 30px;
-  font-size: 14px;
-  background: transparent;
-  border-radius: 3px;
-  border: 2px solid palevioletred;
-  color: palevioletred;
+  width: 200px;
+  height: 60px;
+  font-size: 25px;
+  background-color:#0a0a23;
+  color: #fff;
+  border:none; 
+  border-radius:10px; 
+  padding:15px;
   margin: 0 1em;
   padding: 0.25em 1em;
   cursor: pointer;
