@@ -10,7 +10,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
             type="button"
             onClick={onLeaveFeedback}
           >
-            {option[0].toUpperCase() + option.substring(1)}
+            {option}
           </Button>
         </li>
       ))}

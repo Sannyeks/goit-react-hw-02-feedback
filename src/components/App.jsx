@@ -26,12 +26,12 @@ export class App extends Component {
   countPositiveFeedbackPercentage = () => {
     const { good } = this.state;
     const totalFeedback = this.countTotalFeedback();
-    return Math.round((good * 100) / totalFeedback) + '%';
+    return (Math.round((good * 100) / totalFeedback) || 0) + '%';
   };
   
   render() {
     const { good, neutral, bad } = this.state;
-    const isEmptyList = !(good + neutral + bad);
+    const total = this.countTotalFeedback()
 
     return (
       <div>
@@ -43,14 +43,14 @@ export class App extends Component {
         </Section>
 
         <Section title="Statistics">
-          {isEmptyList ? (
+          {total ? (
             <Notification message="There is no feedback" />
           ) : (
             <Statistics
               good={good}
               neutral={neutral}
               bad={bad}
-              total={this.countTotalFeedback()}
+              total={total}
               positivePercentage={this.countPositiveFeedbackPercentage()}
             />
           )}
